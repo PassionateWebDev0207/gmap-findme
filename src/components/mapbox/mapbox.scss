@@ -26,6 +26,22 @@
         margin-bottom: 20px;
       }
     }
+    a {
+      margin-top: 10px;
+      color: black;
+      background-color: rgba($color: white, $alpha: 0.5);
+      text-decoration: none;
+      width: 40px;
+      height: 40px;
+      line-height: 40px;
+      text-align: center;
+      border: 1px solid transparent;
+      border-radius: 21px;
+
+      &:hover {
+        background-color: rgba($color: white, $alpha: 1);
+      }
+    }
   }
   .mapboxgl-popup-tip {
     display: none;

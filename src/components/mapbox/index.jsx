@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import ReactMapboxGl, { Layer, Feature, Popup } from 'react-mapbox-gl';
 import './mapbox.scss'
 const mapboxToken = 'pk.eyJ1IjoiY29tbW9kaXR5dmVjdG9ycyIsImEiOiJjamR3eWFvd3owcTUwMzRzNmg1eXJjYWlzIn0.QESIireyCutiiFOTlI4y5w';
@@ -57,6 +58,9 @@ const Mapbox = () => {
         <button onClick={() => onClickMinus()}>
           <i className="fa fa-minus" />
         </button>
+        <Link to="/google-map">
+          <i className="fa fa-exchange" />
+        </Link>
       </div>
       <Map
         // eslint-disable-next-line react/style-prop-object

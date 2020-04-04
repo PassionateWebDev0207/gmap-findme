@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 import './google-map.scss';
 const apiMaps = 'AIzaSyDyfzVdtqtjACUbG9vt22O4a93L5OFmSHk';
@@ -58,6 +59,9 @@ const GoogleMap = (props) => {
         <button onClick={() => onClickMinus()}>
           <i className="fa fa-minus" />
         </button>
+        <Link to="/mapbox">
+          <i className="fa fa-exchange" />
+        </Link>
       </div>
       <Map
         google={props.google}
