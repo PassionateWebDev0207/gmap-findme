@@ -1,0 +1,33 @@
+.gmap-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  .gmap-control {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    button {
+      background-color: rgba($color: white, $alpha: 0.5);
+      margin-bottom: 8px;
+      min-width: 40px;
+      height: 40px;
+      border: 1px solid transparent;
+      border-radius: 21px;
+      outline-color: transparent;
+
+      &:hover {
+        background-color: rgba($color: white, $alpha: 1);
+      }
+
+      &:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+  .gm-style-iw-t::after, .gm-control-active.gm-fullscreen-control, .gmnoprint {
+    display: none;
+  }
+}
