@@ -1,15 +1,14 @@
 import React, { useState } from 'react';
-import {
-  Map,
-  Layer,
-  Feature,
-  Popup,
-  mapboxToken,
-  mapboxApiUrl,
-  mapStyle,
-  mapContainerStyle 
-} from './mapbox_config';
+import ReactMapboxGl, { Layer, Feature, Popup } from 'react-mapbox-gl';
 import './mapbox.scss'
+const mapboxToken = 'pk.eyJ1IjoiY29tbW9kaXR5dmVjdG9ycyIsImEiOiJjamR3eWFvd3owcTUwMzRzNmg1eXJjYWlzIn0.QESIireyCutiiFOTlI4y5w';
+const mapboxApiUrl = 'https://api.mapbox.com/geocoding/v5/mapbox.places/';
+const mapStyle = 'mapbox://styles/mapbox/streets-v8';
+const mapContainerStyle = {
+  height: '100%',
+  width: '100%'
+}
+const Map = ReactMapboxGl({ accessToken: mapboxToken });
 
 const Mapbox = () => {
   const [position, setPosition] = useState({lat: 53.631611, lng: -113.323975});
@@ -74,9 +73,7 @@ const Mapbox = () => {
           </Popup>)
         }
         <Layer type="symbol" id="marker" layout={{ 'icon-image': 'marker-15' }}>
-          <Feature coordinates={[position.lng, position.lat]}>
-            <i className="fa fa-map-marker-alt"/>
-          </Feature>
+          <Feature coordinates={[position.lng, position.lat]} />
         </Layer>
       </Map>
     </div>
