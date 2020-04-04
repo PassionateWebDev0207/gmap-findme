@@ -7,7 +7,7 @@ const mapStyle = 'mapbox://styles/mapbox/streets-v8';
 const mapContainerStyle = {
   height: '100%',
   width: '100%'
-}
+};
 const Map = ReactMapboxGl({ accessToken: mapboxToken });
 
 const Mapbox = () => {
@@ -30,6 +30,9 @@ const Mapbox = () => {
       .then(res => {
         setAddress(res.features[0].place_name.split(','));
         setPopup(true);
+      })
+      .catch(error => {
+        console.error(error);
       })
     });
   }
