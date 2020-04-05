@@ -50,7 +50,7 @@ const Mapbox = () => {
     <div className="map-container">
       <div className="map-control">
         <button onClick={() => getCurrentLocation()}>
-          <i className="fa fa-crosshairs" />
+          Find Me
         </button>
         <button onClick={() => onClickPlus()}>
           <i className="fa fa-plus" />

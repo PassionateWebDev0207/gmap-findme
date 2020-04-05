@@ -51,7 +51,7 @@ const GoogleMap = (props) => {
     <div className="gmap-container">
       <div className="gmap-control">
         <button onClick={() => getCurrentLocation()}>
-          <i className="fa fa-crosshairs" />
+          FInd Me
         </button>
         <button onClick={() => onClickPlus()}>
           <i className="fa fa-plus" />

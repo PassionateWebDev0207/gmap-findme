@@ -24,7 +24,14 @@
 
       &:first-child {
         margin-bottom: 20px;
+        font-weight: bold;
+        font-size: 12px;
+        width: 80px;
       }
+
+      &:nth-child(2), &:nth-child(3) {
+        width: 40px;
+      }      
     }
     a {
       margin-top: 10px;
