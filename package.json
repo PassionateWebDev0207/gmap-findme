@@ -8,7 +8,7 @@
     "@testing-library/user-event": "^7.1.2",
     "google-maps-react": "^2.0.2",
     "mapbox-gl": "0.52.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-mapbox-gl": "4.1.0",
